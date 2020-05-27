@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node:
+    build: .docker
+    volumes:
+      - ./:/var/bb
+    command: /var/bb/.docker/command.sh
+    working_dir: /var/bb
+    ports:
+      # client
+      - 3000:3000
+      - 3001:3001
